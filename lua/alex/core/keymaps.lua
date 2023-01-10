@@ -5,6 +5,8 @@ local keymap = vim.keymap
 -- general keymaps
 keymap.set("i", "jk", "<ESC>") -- return to normal mode when we are in insert mode with "jk"
 
+keymap.set("n", "<leader>S", ":w<CR>") -- save the file
+
 keymap.set("n", "<leader>nh", ":nohl<CR>") -- undo the selection when search to a specific word
 
 keymap.set("n", "x", '"_x') -- not copy into the clipboard when delete a word
@@ -16,6 +18,7 @@ keymap.set("n", "<leader>-", "<C-x>") -- -1 to a number
 keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
 keymap.set("n", "<leader>sh", "<C-w>s") -- split window horizontally
 keymap.set("n", "<leader>se", "<C-w>=") -- make split windows equal width & height
+keymap.set("n", "<leader>ss", "<C-w>w") -- move between split windows
 keymap.set("n", "<leader>sx", ":close<CR>") -- close current split window
 
 keymap.set("n", "<leader>to", ":tabnew<CR>") -- open new tab
@@ -39,3 +42,7 @@ keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>") -- find string in 
 keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>") -- find string under cursor in current working directory
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help tags
+
+-- diffview
+keymap.set("n", "<leader>go", ":DiffviewOpen<CR>") -- open diffview
+keymap.set("n", "<leader>gx", ":DiffviewClose<CR>") -- close diffview
