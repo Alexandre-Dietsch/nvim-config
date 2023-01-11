@@ -5,7 +5,7 @@ local keymap = vim.keymap
 -- general keymaps
 keymap.set("i", "jk", "<ESC>") -- return to normal mode when we are in insert mode with "jk"
 
-keymap.set("n", "<leader>S", ":w<CR>") -- save the file
+keymap.set("n", "<C-s>", ":w<CR>") -- save the file
 
 keymap.set("n", "<leader>nh", ":nohl<CR>") -- undo the selection when search to a specific word
 
@@ -40,7 +40,8 @@ keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
 keymap.set(
 	"n",
 	"<leader>f",
-	"<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>"
+	-- "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>"
+	"<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes'))<cr>"
 )
 -- keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
 -- keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>") -- find string in current working directory as you type

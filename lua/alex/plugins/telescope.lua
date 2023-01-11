@@ -14,7 +14,7 @@ end
 telescope.setup({
 	-- configure custom mappings
 	defaults = {
-    vimgrep_arguments = { '.gitignore' },
+		vimgrep_arguments = { ".gitignore" },
 		file_ignore_patterns = { "node_modules", ".git/*" },
 		mappings = {
 			i = {
@@ -26,4 +26,4 @@ telescope.setup({
 	},
 })
 
--- telescope.load_extension("fzf")
+telescope.load_extension("fzf")

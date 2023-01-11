@@ -103,6 +103,9 @@ return packer.startup(function(use)
 	-- git diff
 	use({ "sindrets/diffview.nvim", requires = "nvim-lua/plenary.nvim" })
 
+	-- hex color on CSS
+	use("NvChad/nvim-colorizer.lua")
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end
