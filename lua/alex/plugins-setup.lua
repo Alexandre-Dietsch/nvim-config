@@ -109,6 +109,9 @@ return packer.startup(function(use)
 	-- indent line
 	use("lukas-reineke/indent-blankline.nvim")
 
+	-- harpoon to navigate between files
+	use("theprimeagen/harpoon")
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end
