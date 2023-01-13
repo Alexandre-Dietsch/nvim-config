@@ -99,9 +99,9 @@ return packer.startup(function(use)
 
 	-- git integration
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
-
-	-- git diff
 	use({ "sindrets/diffview.nvim", requires = "nvim-lua/plenary.nvim" })
+	use("tpope/vim-fugitive")
+	use("rbong/vim-flog")
 
 	-- hex color on CSS
 	use("NvChad/nvim-colorizer.lua")

@@ -6,6 +6,7 @@ local keymap = vim.keymap
 keymap.set("i", "jk", "<ESC>") -- return to normal mode when we are in insert mode with "jk"
 
 keymap.set("n", "<C-s>", ":w<CR>") -- save the file
+keymap.set("n", "<C-w>", ":q<CR>") -- quit the file
 
 keymap.set("n", "<leader>nh", ":nohl<CR>") -- undo the selection when search to a specific word
 
@@ -18,7 +19,7 @@ keymap.set("n", "<leader>-", "<C-x>") -- -1 to a number
 keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
 keymap.set("n", "<leader>sh", "<C-w>s") -- split window horizontally
 keymap.set("n", "<leader>se", "<C-w>=") -- make split windows equal width & height
-keymap.set("n", "<leader>ss", "<C-w>w") -- move between split windows
+keymap.set("n", "<leader>m", "<C-w>w") -- move between split windows
 keymap.set("n", "<leader>sx", ":close<CR>") -- close current split window
 
 keymap.set("n", "<leader>to", ":tabnew<CR>") -- open new tab
@@ -37,12 +38,7 @@ keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- toggle split window max
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
 
 -- telescope
-keymap.set(
-	"n",
-	"<leader>f",
-	-- "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>"
-	"<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes'))<cr>"
-)
+keymap.set("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes'))<cr>")
 
 keymap.set("n", "<C-p>", "<cmd>lua require'telescope.builtin'.git_files(require('telescope.themes'))<cr>")
 -- keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
@@ -54,3 +50,9 @@ keymap.set("n", "<C-p>", "<cmd>lua require'telescope.builtin'.git_files(require(
 -- diffview
 keymap.set("n", "<leader>go", ":DiffviewOpen<CR>") -- open diffview
 keymap.set("n", "<leader>gx", ":DiffviewClose<CR>") -- close diffview
+
+-- flog
+keymap.set("n", "<leader>fo", ":Flog<CR>") -- open flog
+
+--vim-fugitive
+keymap.set("n", "<leader>gs", ":G log --all<CR>") -- git status
