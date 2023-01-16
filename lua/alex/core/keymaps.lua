@@ -48,8 +48,10 @@ keymap.set("n", "<C-p>", "<cmd>lua require'telescope.builtin'.git_files(require(
 -- keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help tags
 
 -- diffview
-keymap.set("n", "<leader>go", ":DiffviewOpen<CR>") -- open diffview
-keymap.set("n", "<leader>gx", ":DiffviewClose<CR>") -- close diffview
+keymap.set("n", "<leader>do", ":DiffviewOpen<CR>") -- open diffview
+keymap.set("n", "<leader>df", ":DiffviewFileHistory<CR>") -- open file history in diffview on the current branch
+keymap.set("n", "<leader>dc", ":DiffviewFileHistory %<CR>") -- open file history in diffview on the current file
+keymap.set("n", "<leader>dx", ":DiffviewClose<CR>") -- close diffview
 
 -- flog
 keymap.set("n", "<leader>fo", ":Flog<CR>") -- open flog
