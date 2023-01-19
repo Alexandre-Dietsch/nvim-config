@@ -6,9 +6,9 @@ local keymap = vim.keymap
 keymap.set("i", "jk", "<ESC>") -- return to normal mode when we are in insert mode with "jk"
 
 keymap.set("n", "<C-s>", ":w<CR>") -- save the file
-keymap.set("n", "<C-w>", ":q<CR>") -- quit the file
+keymap.set("n", "<leader>q", ":q<CR>") -- quit the file
 
-keymap.set("n", "<leader>nh", ":nohl<CR>") -- undo the selection when search to a specific word
+keymap.set("n", "<leader>u", ":nohl<CR>") -- undo the selection when search to a specific word
 
 keymap.set("n", "x", '"_x') -- not copy into the clipboard when delete a word
 
@@ -39,13 +39,7 @@ keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
 
 -- telescope
 keymap.set("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes'))<cr>")
-
 keymap.set("n", "<C-p>", "<cmd>lua require'telescope.builtin'.git_files(require('telescope.themes'))<cr>")
--- keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
--- keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>") -- find string in current working directory as you type
--- keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>") -- find string under cursor in current working directory
--- keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
--- keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help tags
 
 -- diffview
 keymap.set("n", "<leader>do", ":DiffviewOpen<CR>") -- open diffview
@@ -54,7 +48,10 @@ keymap.set("n", "<leader>dc", ":DiffviewFileHistory %<CR>") -- open file history
 keymap.set("n", "<leader>dx", ":DiffviewClose<CR>") -- close diffview
 
 -- flog
-keymap.set("n", "<leader>fo", ":Flog<CR>") -- open flog
+keymap.set("n", "<leader>t", ":Flog<CR>") -- open flog
 
 --vim-fugitive
-keymap.set("n", "<leader>gs", ":G log --all<CR>") -- git status
+keymap.set("n", "<leader>gl", ":G log --all<CR>") -- git log
+keymap.set("n", "<leader>gd", ":G diff<CR>") -- git diff
+keymap.set("n", "<leader>gs", ":G status<CR>") -- git status
+keymap.set("n", "<leader>gi", ":Git<CR>") -- git

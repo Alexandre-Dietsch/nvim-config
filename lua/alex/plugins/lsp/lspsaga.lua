@@ -19,8 +19,9 @@ require("lspsaga").setup({
 	},
 	ui = {
 		colors = {
-			normal_bg = "#012b4d",
-			border_style = "rounded",
+			-- normal_bg = "#012b4d",
+			normal_bg = "#2F353E",
+			border_style = "round",
 		},
 	},
 })
